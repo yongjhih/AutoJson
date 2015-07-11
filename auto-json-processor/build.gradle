@@ -1,3 +1,6 @@
+version rootProject.ext.VERSION_NAME
+group rootProject.ext.GROUP
+
 apply plugin: 'java'
 apply from: file('deploy.gradle')
 
@@ -5,8 +8,7 @@ targetCompatibility = '1.7'
 sourceCompatibility = '1.7'
 
 dependencies {
-  //compile project(':auto-json')
-  compile 'com.infstory:auto-json:1.0.1'
+  compile project(':auto-json')
   compile 'com.google.auto.service:auto-service:1.0-rc2'
   compile 'com.google.code.findbugs:jsr305:2.0.3'
   compile 'org.apache.velocity:velocity:1.7'
