@@ -100,6 +100,11 @@ final public class $subclass$formalTypes extends $origClass$actualTypes {
 
   @Override
   public String toString() {
+    try {
+        return LoganSquare.serialize(this);
+    } catch (java.io.IOException e) {
+    }
+
     return "$simpleClassName{"
 
   #foreach ($p in $props)

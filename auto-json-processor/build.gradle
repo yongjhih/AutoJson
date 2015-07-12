@@ -1,6 +1,16 @@
 version rootProject.ext.VERSION_NAME
 group rootProject.ext.GROUP
 
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+repositories {
+    jcenter()
+}
+
 apply plugin: 'java'
 apply from: file('deploy.gradle')
 
