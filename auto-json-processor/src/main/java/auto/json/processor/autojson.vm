@@ -408,6 +408,7 @@ final public class $subclass$formalTypes extends $origClass$actualTypes {
 
         @Override
         public void serialize(${j.type} object, String fieldName, boolean writeFieldNameForObject, JsonGenerator jsonGenerator) throws IOException {
+            if (object == null) return;
             //if (writeFieldNameForObject) { }
             jsonGenerator.writeFieldName(fieldName);
             ${j.packageName}.AutoJson_${j.simpleName}${D}${D}JsonObjectMapper._serialize((${j.packageName}.AutoJson_${j.simpleName}) object, jsonGenerator, true);
