@@ -43,8 +43,8 @@ repositories {
 }
 
 dependencies {
-    compile 'com.infstory:auto-json:1.0.0'
-    apt 'com.infstory:auto-json-processor:1.0.0'
+    compile 'com.infstory:auto-json:1.0.2'
+    apt 'com.infstory:auto-json-processor:1.0.2'
 }
 ```
 
@@ -58,8 +58,8 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.yongjhih.auto-json:auto-json:1.0.0'
-    apt 'com.github.yongjhih.auto-json:auto-json-processor:1.0.0'
+    compile 'com.github.yongjhih.auto-json:auto-json:-SNAPSHOT'
+    apt 'com.github.yongjhih.auto-json:auto-json-processor:-SNAPSHOT'
 }
 ```
 
