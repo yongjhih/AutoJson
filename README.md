@@ -1,5 +1,7 @@
 # AutoJson
 
+[![Join the chat at https://gitter.im/yongjhih/AutoJson](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yongjhih/AutoJson?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Download](https://api.bintray.com/packages/yongjhih/maven/AutoJson/images/download.svg) ](https://bintray.com/yongjhih/maven/AutoJson/_latestVersion)
 [![JitPack](https://img.shields.io/github/tag/yongjhih/AutoJson.svg?label=JitPack)](https://jitpack.io/#yongjhih/AutoJson)
 [![Build Status](https://travis-ci.org/yongjhih/AutoJson.svg)](https://travis-ci.org/yongjhih/AutoJson)
