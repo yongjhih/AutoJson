@@ -1,5 +1,10 @@
 # AutoJson
 
+[![Download](https://api.bintray.com/packages/yongjhih/maven/AutoJson/images/download.svg) ](https://bintray.com/yongjhih/maven/AutoJson/_latestVersion)
+[![JitPack](https://img.shields.io/github/tag/yongjhih/AutoJson.svg?label=JitPack)](https://jitpack.io/#yongjhih/AutoJson)
+[![Build Status](https://travis-ci.org/yongjhih/AutoJson.svg)](https://travis-ci.org/yongjhih/AutoJson)
+[![Join the chat at https://gitter.im/yongjhih/AutoJson](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yongjhih/AutoJson?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![](https://avatars0.githubusercontent.com/u/5761889?v=3&s=48)](https://github.com/Wendly)
 [![](https://avatars3.githubusercontent.com/u/213736?v=3&s=48)](https://github.com/yongjhih)
 Contributors..
