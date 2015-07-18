@@ -1,5 +1,6 @@
 # AutoJson
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AutoJson-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/2155)
 [![Download](https://api.bintray.com/packages/yongjhih/maven/AutoJson/images/download.svg) ](https://bintray.com/yongjhih/maven/AutoJson/_latestVersion)
 [![JitPack](https://img.shields.io/github/tag/yongjhih/AutoJson.svg?label=JitPack)](https://jitpack.io/#yongjhih/AutoJson)
 [![Build Status](https://travis-ci.org/yongjhih/AutoJson.svg)](https://travis-ci.org/yongjhih/AutoJson)
