@@ -42,6 +42,7 @@ String jsonString = Post.builder().id(1).isHidden(false).serailize();
 ```
 or
 ```java
+Post post = Post.builder().id(1).isHidden(false).build();
 String jsonString = LoganSquare.serailize(post);
 ```
 
