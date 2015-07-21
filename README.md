@@ -21,6 +21,14 @@ Post post = Post.parse(jsonString);
 post.id();
 post.isHidden();
 ```
+or
+```java
+Post post = LoganSquare.parse(jsonString, AutoJson_Post.class);
+post.id();
+post.isHidden();
+```
+
+
 ```java
 Post post = Post.builder().id(1).isHidden(false).build();
 String jsonString = post.serialize();
