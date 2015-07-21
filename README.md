@@ -40,6 +40,10 @@ or
 ```java
 String jsonString = Post.builder().id(1).isHidden(false).serailize();
 ```
+or
+```java
+String jsonString = LoganSquare.serailize(post);
+```
 
 Post.java:
 
