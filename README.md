@@ -26,7 +26,7 @@ Post post = Post.builder().id(1).isHidden(false).build();
 String jsonString = post.serialize();
 ```
 ```java
-JsonString = Post.builder().id(1).isHidden(false).serailize();
+String jsonString = Post.builder().id(1).isHidden(false).serailize();
 ```
 
 ```java
