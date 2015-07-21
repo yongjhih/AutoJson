@@ -17,11 +17,16 @@ AutoValue + Json Mapper(LoganSquare).
 ## Usage
 
 ```java
-Post post = LoganSquare.parse(jsonString, AutoJson_Post.class);
+Post post = Post.parse(jsonString);
 post.id();
 post.isHidden();
-
+```
+```java
 Post post = Post.builder().id(1).isHidden(false).build();
+String jsonString = post.serialize();
+```
+```java
+JsonString = Post.builder().id(1).isHidden(false).serailize();
 ```
 
 ```java
