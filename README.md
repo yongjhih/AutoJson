@@ -16,6 +16,8 @@ AutoValue + Json Mapper(LoganSquare).
 
 ## Usage
 
+parse:
+
 ```java
 Post post = Post.parse(jsonString);
 post.id();
