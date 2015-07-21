@@ -17,6 +17,10 @@ AutoValue + Json Mapper(LoganSquare).
 ## Usage
 
 ```java
+Post post = LoganSquare.parse(jsonString, AutoJson_Post.class);
+```
+
+```java
 @AutoJson
 public abstract class Post {
     @Nullable
