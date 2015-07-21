@@ -18,6 +18,10 @@ AutoValue + Json Mapper(LoganSquare).
 
 ```java
 Post post = LoganSquare.parse(jsonString, AutoJson_Post.class);
+post.id();
+post.isHidden();
+
+Post post = Post.builder().id(1).isHidden(false).build();
 ```
 
 ```java
@@ -32,6 +36,14 @@ public abstract class Post {
     public abstract Boolean isHidden();
 
     // ...
+
+    @AutoJson.Builder
+    public static abstract class Builder {
+        public abstract Builder id(String id);
+        public abstract Builder isHidden(Boolean isHidden);
+        public static Post build();
+    }
+    public static Builder builder();
 }
 ```
 
