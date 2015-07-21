@@ -28,14 +28,18 @@ post.id();
 post.isHidden();
 ```
 
+serialize:
 
 ```java
 Post post = Post.builder().id(1).isHidden(false).build();
 String jsonString = post.serialize();
 ```
+or
 ```java
 String jsonString = Post.builder().id(1).isHidden(false).serailize();
 ```
+
+Post.java:
 
 ```java
 @AutoJson
