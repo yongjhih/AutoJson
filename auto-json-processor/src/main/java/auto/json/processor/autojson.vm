@@ -24,6 +24,7 @@ import com.bluelinelabs.logansquare.typeconverters.*;
 import android.os.Bundle;
 import java.io.IOException;
 import com.fasterxml.jackson.core.*;
+import android.os.Parcelable;
 
 ${gwtCompatibleAnnotation}
 @JsonObject
@@ -291,6 +292,42 @@ final public class $subclass$formalTypes extends $origClass$actualTypes {
         }
         public static void put(Bundle bundle, String key, String[] value) {
             bundle.putStringArray(key, value);
+        }
+        public static void put(Bundle bundle, String key, byte value) {
+            bundle.putByte(key, value);
+        }
+        public static void put(Bundle bundle, String key, byte[] value) {
+            bundle.putByteArray(key, value);
+        }
+        public static void put(Bundle bundle, String key, char value) {
+            bundle.putChar(key, value);
+        }
+        public static void put(Bundle bundle, String key, char[] value) {
+            bundle.putCharArray(key, value);
+        }
+        public static void put(Bundle bundle, String key, CharSequence value) {
+            bundle.putCharSequence(key, value);
+        }
+        public static void put(Bundle bundle, String key, CharSequence[] value) {
+            bundle.putCharSequenceArray(key, value);
+        }
+        public static void put(Bundle bundle, String key, float value) {
+            bundle.putFloat(key, value);
+        }
+        public static void put(Bundle bundle, String key, float[] value) {
+            bundle.putFloatArray(key, value);
+        }
+        public static void put(Bundle bundle, String key, Parcelable value) {
+            bundle.putParcelable(key, value);
+        }
+        public static void put(Bundle bundle, String key, Parcelable[] value) {
+            bundle.putParcelableArray(key, value);
+        }
+        public static void put(Bundle bundle, String key, short value) {
+            bundle.putShort(key, value);
+        }
+        public static void put(Bundle bundle, String key, short[] value) {
+            bundle.putShortArray(key, value);
         }
     }
 
