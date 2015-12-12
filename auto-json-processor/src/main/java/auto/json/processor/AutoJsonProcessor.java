@@ -199,6 +199,7 @@ public class AutoJsonProcessor extends AbstractProcessor {
     private final TypeSimplifier typeSimplifier;
     private final ProcessingEnvironment processingEnv;
     private final boolean stringable;
+    private final boolean bundlable;
 
     Property(
         String name,
@@ -229,6 +230,7 @@ public class AutoJsonProcessor extends AbstractProcessor {
       this.processingEnv = processingEnv;
       this.annotations = buildAnnotations(typeSimplifier);
       this.stringable = buildStringable();
+      this.bundlable = buildBundlable();
     }
 
     private ImmutableList<String> buildAnnotations(TypeSimplifier typeSimplifier) {
@@ -294,6 +296,77 @@ public class AutoJsonProcessor extends AbstractProcessor {
       return processingEnv.getTypeUtils().isSameType(stringType, returnType);
     }
 
+    private boolean buildBundlable() {
+        TypeMirror returnType = method.getReturnType();
+        if (returnType.toString().equals("android.os.Parcel")) {
+            return true;
+        }
+        if (returnType.toString().equals("android.os.Parcel[]")) {
+            return true;
+        }
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, boolean.class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, boolean[].class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, double.class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, double[].class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, int.class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, int[].class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, long.class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, long[].class), returnType)) {
+            //return true;
+        //}
+        if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, String.class), returnType)) {
+            return true;
+        }
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, String[].class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, byte.class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, byte[].class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, char.class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, char[].class), returnType)) {
+            //return true;
+        //}
+        if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, CharSequence.class), returnType)) {
+            return true;
+        }
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, CharSequence[].class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, float.class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, float[].class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, short.class), returnType)) {
+            //return true;
+        //}
+        //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, short[].class), returnType)) {
+            //return true;
+        //}
+        return false;
+    }
+
     /**
      * Returns the name of the property as it should be used when declaring identifiers (fields and
      * parameters). If the original getter method was {@code foo()} then this will be {@code foo}.
@@ -357,6 +430,10 @@ public class AutoJsonProcessor extends AbstractProcessor {
 
     public boolean getStringable() {
       return stringable;
+    }
+
+    public boolean getBundlable() {
+      return bundlable;
     }
 
     private String box(TypeKind kind) {

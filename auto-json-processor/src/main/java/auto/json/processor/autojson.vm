@@ -249,7 +249,7 @@ final public class $subclass$formalTypes extends $origClass$actualTypes {
 
       #foreach ($p in $props)
 
-      #if ($p.stringable)
+      #if ($p.bundlable)
 
       if (${p.getter}() != null) Bundles.put(bundle, "${p.key}", ${p.getter}());
 
