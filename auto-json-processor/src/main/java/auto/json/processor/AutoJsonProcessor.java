@@ -274,12 +274,22 @@ public class AutoJsonProcessor extends AbstractProcessor {
           builder.add(annotation);
 
           AutoJson.Field field = method.getAnnotation(AutoJson.Field.class);
-          String[] names = field.name();
+          String[] names = null;
+          if (field != null) {
+              names = field.name();
 
-          key = name;
-          if (names.length > 0) {
-            key = names[0];
+              if (names.length > 0) {
+                  key = names[0];
+              }
           }
+          AutoJson.ToField toField = method.getAnnotation(AutoJson.ToField.class);
+          if (toField != null) {
+              names = toField.name();
+              if (names.length > 0) {
+                  key = names[0];
+              }
+          }
+
         } else {
           // TODO(user): we should import this type if it is not already imported
           AnnotationOutput annotationOutput = new AnnotationOutput(typeSimplifier);
