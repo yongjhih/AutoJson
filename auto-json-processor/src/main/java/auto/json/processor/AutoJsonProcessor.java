@@ -304,6 +304,12 @@ public class AutoJsonProcessor extends AbstractProcessor {
         if (returnType.toString().equals("android.os.Parcel[]")) {
             return true;
         }
+        if (returnType.toString().equals("android.graphics.Bitmap")) {
+            return true;
+        }
+        if (returnType.toString().equals("android.graphics.Bitmap[]")) {
+            return true;
+        }
         //if (processingEnv.getTypeUtils().isSameType(getTypeMirror(processingEnv, boolean.class), returnType)) {
             //return true;
         //}
