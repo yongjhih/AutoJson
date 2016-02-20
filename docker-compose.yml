@@ -1,0 +1,7 @@
+app:
+  #image: android
+  build: .
+  volumes:
+   - .:/code
+   - ${HOME}/.gradle:/home/app/.gradle
+  command: /code/gradlew -p /code assembleDebug
