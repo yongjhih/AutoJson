@@ -84,8 +84,8 @@ repositories {
 }
 
 dependencies {
-    compile 'com.infstory:auto-json:1.0.2'
-    apt 'com.infstory:auto-json-processor:1.0.2'
+    compile 'com.infstory:auto-json:1.0.3'
+    apt 'com.infstory:auto-json-processor:1.0.3'
 }
 ```
 
