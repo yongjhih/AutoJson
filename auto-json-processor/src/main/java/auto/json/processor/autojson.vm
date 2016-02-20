@@ -440,7 +440,7 @@ final public class $subclass$formalTypes extends $origClass$actualTypes {
     public static class ${j.name}Converter implements TypeConverter<${j.type}> {
         @Override
         public ${j.type} parse(JsonParser jsonParser) throws IOException {
-            return ${j.packageName}.AutoJson_${j.simpleName}${D}${D}JsonObjectMapper._parse(jsonParser);
+            return new ${j.packageName}.AutoJson_${j.simpleName}${D}${D}JsonObjectMapper().parse(jsonParser);
         }
 
         @Override
@@ -448,7 +448,7 @@ final public class $subclass$formalTypes extends $origClass$actualTypes {
             if (object == null) return;
             //if (writeFieldNameForObject) { }
             jsonGenerator.writeFieldName(fieldName);
-            ${j.packageName}.AutoJson_${j.simpleName}${D}${D}JsonObjectMapper._serialize((${j.packageName}.AutoJson_${j.simpleName}) object, jsonGenerator, true);
+            new ${j.packageName}.AutoJson_${j.simpleName}${D}${D}JsonObjectMapper().serialize((${j.packageName}.AutoJson_${j.simpleName}) object, jsonGenerator, true);
         }
     }
 #end
