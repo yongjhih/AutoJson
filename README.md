@@ -78,9 +78,6 @@ via jcenter:
 ```gradle
 repositories {
     jcenter()
-    maven {
-        url 'https://dl.bintray.com/yongjhih/maven/'
-    }
 }
 
 dependencies {
