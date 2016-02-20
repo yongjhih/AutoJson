@@ -3,6 +3,8 @@ package model3;
 import auto.json.AutoJson;
 import android.os.Parcelable;
 import android.graphics.Bitmap;
+import android.support.annotation.Nullable;
+
 import java.util.List;
 import java.util.Map;
 import model1.HeightBucket;
@@ -20,5 +22,6 @@ public abstract class Person implements Parcelable {
   public abstract HeightBucket heightType();
   public abstract Map<String, Address> addresses();
   public abstract List<Person> friends();
+  @Nullable
   public abstract Bitmap bitmap();
 }

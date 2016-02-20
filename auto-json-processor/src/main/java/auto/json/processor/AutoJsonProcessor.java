@@ -42,6 +42,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Set;
+import java.util.regex.Pattern;
 
 import javax.annotation.Generated;
 import javax.annotation.processing.AbstractProcessor;
@@ -255,14 +256,19 @@ public class AutoJsonProcessor extends AbstractProcessor {
 
           TypeMirror returnType = method.getReturnType();
           if (TypeKind.DECLARED.equals(returnType.getKind())) {
+            Pattern pattern = Pattern.compile("\\btypeConverter");
             if (isAutoJson((TypeElement) typeUtils.asElement(returnType))) {
-              annotation = annotation + "(" + "typeConverter" + " = " +
-                  toClassName(returnType.toString()) + "Converter.class" + ")";
+              if(pattern.matcher(annotation).matches()) {
+                annotation = annotation + "(" + "typeConverter" + " = " +
+                        toClassName(returnType.toString()) + "Converter.class" + ")";
+              }
             } else {
               for (TypeMirror genericType : ((DeclaredType) returnType).getTypeArguments()) {
                 if (isAutoJson((TypeElement) typeUtils.asElement(genericType))) {
-                  annotation = annotation + "(" + "typeConverter" + " = " +
-                      toClassName(genericType.toString()) + "Converter.class" + ")";
+                  if(pattern.matcher(annotation).matches()) {
+                    annotation = annotation + "(" + "typeConverter" + " = " +
+                            toClassName(genericType.toString()) + "Converter.class" + ")";
+                  }
                   break;
                 }
               }
