@@ -258,14 +258,14 @@ public class AutoJsonProcessor extends AbstractProcessor {
           if (TypeKind.DECLARED.equals(returnType.getKind())) {
             Pattern pattern = Pattern.compile("\\btypeConverter");
             if (isAutoJson((TypeElement) typeUtils.asElement(returnType))) {
-              if(pattern.matcher(annotation).matches()) {
+              if (!pattern.matcher(annotation).find()) {
                 annotation = annotation + "(" + "typeConverter" + " = " +
                         toClassName(returnType.toString()) + "Converter.class" + ")";
               }
             } else {
               for (TypeMirror genericType : ((DeclaredType) returnType).getTypeArguments()) {
                 if (isAutoJson((TypeElement) typeUtils.asElement(genericType))) {
-                  if(pattern.matcher(annotation).matches()) {
+                  if (!pattern.matcher(annotation).find()) {
                     annotation = annotation + "(" + "typeConverter" + " = " +
                             toClassName(genericType.toString()) + "Converter.class" + ")";
                   }
